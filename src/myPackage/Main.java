@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+       /* Scanner sc = new Scanner(System.in);
         System.out.println("Birinci Arrayin size ini daxil edin: ");
         byte sizeOne = sc.nextByte();
         System.out.println("Ikinci Arrayin size ini daxil edin: ");
@@ -28,7 +28,11 @@ class Main {
         // CommonElements(myArray,mySecondArray);
         //DifferentElements(myArray,mySecondArray);
 
-        NotSameElements(myArray, mySecondArray);
+       // NotSameElements(myArray, mySecondArray);
+
+        */
+        Integer[] array={1,2,3,4,0,0,0,0,9,10};
+        ChangeZerosWithNull(array);
     }
 
     public static void SameElementsOfArray(int[] arrayOne, int[] arrayTwo) {
@@ -164,5 +168,16 @@ class Main {
             index++;
         }
         return newArray;
+    }
+    public static void ChangeZerosWithNull(Integer[] arr){
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i]==0)
+                arr[i]=null;
+        }
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i]!=null)
+            System.out.print(arr[i]+" ");
+        }
+      //  System.out.println(Arrays.toString(arr));
     }
 }
